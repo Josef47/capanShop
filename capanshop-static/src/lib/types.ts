@@ -1,0 +1,37 @@
+export type Lang = "nl" | "en";
+
+export interface ServiceItem {
+  id: string;
+  name: { nl: string; en: string };
+  price: number;
+  priceFrom?: boolean;
+  durationMin: number;
+}
+
+export interface ServiceCategory {
+  id: string;
+  title: { nl: string; en: string };
+  subtitle?: { nl: string; en: string };
+  items: ServiceItem[];
+}
+
+export interface Barber {
+  id: string;
+  name: string;
+  role: { nl: string; en: string };
+  image: string;
+}
+
+export interface DayHours {
+  day: number;
+  open: string | null;
+  close: string | null;
+}
+
+export interface Review {
+  id: string;
+  name: string;
+  rating: number;
+  text: { nl: string; en: string };
+  date: string;
+}
