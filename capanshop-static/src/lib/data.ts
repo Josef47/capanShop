@@ -7,7 +7,7 @@ import type { Barber, DayHours, Review, ServiceCategory } from "./types";
  */
 
 export const SHOP = {
-  name: "Capan Kapsalon",
+  name: "Capan's Barber Shop",
   phone: "+31153647232",
   phoneDisplay: "015 364 72 32",
   mobile: "+31611740604",
@@ -64,9 +64,24 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       { id: "d5", name: { nl: "Wassen en föhnen", en: "Wash & blow-dry" }, price: 40, priceFrom: true, durationMin: 45 },
       { id: "d6", name: { nl: "High-Light", en: "Highlights" }, price: 65, durationMin: 90 },
       { id: "d7", name: { nl: "Uitgroei", en: "Root touch-up" }, price: 37, durationMin: 60 },
-      { id: "d8", name: { nl: "Epileren wenkbrauwen met touw", en: "Eyebrow threading" }, price: 15, durationMin: 15 },
+      { id: "d8", name: { nl: "Wenkbrauwen epileren met touw", en: "Eyebrow threading" }, price: 15, durationMin: 15 },
       { id: "d9", name: { nl: "Epileren bovenlip", en: "Upper lip threading" }, price: 7.5, durationMin: 15 },
       { id: "d10", name: { nl: "Wenkbrauwen verven", en: "Eyebrow tinting" }, price: 10, durationMin: 15 },
+    ],
+  },
+  {
+    id: "prothesen",
+    title: { nl: "Haarprothesen", en: "Hair prostheses" },
+    items: [
+      {
+        id: "p1",
+        name: { nl: "Haarprothese op maat", en: "Custom hair prosthesis fitting" },
+        priceText: {
+          nl: "Kom langs voor een persoonlijk prijsadvies",
+          en: "Come in for a personalized quote",
+        },
+        durationMin: 30,
+      },
     ],
   },
 ];
@@ -176,8 +191,8 @@ export const FAQ_ITEMS = [
     id: "f1",
     q: { nl: "Moet ik een afspraak maken?", en: "Do I need an appointment?" },
     a: {
-      nl: "Een afspraak is niet verplicht, maar wel aan te raden. Online boeken garandeert dat u direct geholpen wordt.",
-      en: "An appointment is not required but recommended. Booking online guarantees you are helped right away.",
+      nl: "Een afspraak is niet verplicht. Je kunt gewoon langskomen wanneer het jou uitkomt.",
+      en: "An appointment is not required. You can simply drop by whenever it suits you.",
     },
   },
   {
@@ -194,22 +209,6 @@ export const FAQ_ITEMS = [
     a: {
       nl: "Jazeker! Kinderen t/m 8 jaar hebben een speciaal tarief. Wij nemen graag de tijd voor de kleintjes.",
       en: "Absolutely! Children up to 8 years have a special rate. We gladly take our time with the little ones.",
-    },
-  },
-  {
-    id: "f4",
-    q: { nl: "Hoe werkt de spaarkaart?", en: "How does the loyalty card work?" },
-    a: {
-      nl: "Bij elke knipbeurt ontvangt u een stempel. Bij 10 stempels is de volgende knipbeurt gratis.",
-      en: "You receive a stamp with every haircut. After 10 stamps your next haircut is free.",
-    },
-  },
-  {
-    id: "f5",
-    q: { nl: "Verkopen jullie cadeaubonnen?", en: "Do you sell gift vouchers?" },
-    a: {
-      nl: "Ja, cadeaubonnen zijn verkrijgbaar in de salon voor elk gewenst bedrag.",
-      en: "Yes, gift vouchers are available in the salon for any amount.",
     },
   },
 ];

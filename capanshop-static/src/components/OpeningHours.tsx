@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { OPENING_HOURS } from "@/lib/data";
 import { useLang } from "@/lib/LanguageContext";
 import Reveal from "./Reveal";
@@ -5,22 +6,69 @@ import OpenStatus from "./OpenStatus";
 
 const ORDER = [1, 2, 3, 4, 5, 6, 0];
 
+type Holiday = {
+  date: string;
+  name: string;
+};
+
 export default function OpeningHours() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const today = new Date().getDay();
+  const [holiday, setHoliday] = useState<Holiday | null>(null);
+
+  useEffect(() => {
+    let ignore = false;
+
+    async function loadHoliday() {
+      try {
+        const year = new Date().getFullYear();
+        const response = await fetch(`https://date.nager.at/api/v3/PublicHolidays/${year}/NL`);
+        if (!response.ok) return;
+
+        const data = (await response.json()) as Array<{ date?: string; name?: string; localName?: string }>;
+        const todayKey = new Date().toLocaleDateString("sv-SE");
+        const match = data.find((item) => item.date === todayKey);
+
+        if (!ignore && match) {
+          setHoliday({
+            date: match.date ?? todayKey,
+            name: match.localName || match.name || "nationale feestdag",
+          });
+        }
+      } catch {
+        // Ignore API failures and keep the default schedule view.
+      }
+    }
+
+    loadHoliday();
+    return () => {
+      ignore = true;
+    };
+  }, []);
+
+  const isHolidayToday = holiday?.date === new Date().toLocaleDateString("sv-SE");
 
   return (
     <section id="hours" className="bg-coffee-950 py-20">
-      <div className="container-shop grid items-center gap-12 lg:grid-cols-2">
+      <div className="container-shop grid items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <Reveal>
-          <span className="section-eyebrow">
-            <span className="h-px w-8 bg-gold-400" />
-            {t("hours.title")}
-          </span>
-          <h2 className="section-title">{t("hours.title")}</h2>
-          <p className="mt-4 max-w-md text-cream-300">Capan Kapsalon — {t("footer.tagline")}.</p>
-          <div className="mt-6">
-            <OpenStatus large />
+          <div className="max-w-xl px-1 sm:px-2">
+            <span className="section-eyebrow">
+              <span className="h-px w-8 bg-gold-400" />
+              {t("hours.title")}
+            </span>
+            <h2 className="section-title">{t("hours.title")}</h2>
+            <p className="mt-4 text-cream-300">Capan's Barber Shop — {t("footer.tagline")}.</p>
+            {isHolidayToday && holiday && (
+              <p className="mt-4 rounded-md border border-red-400/20 bg-red-400/10 px-4 py-3 text-sm text-red-100">
+                {lang === "nl"
+                  ? `Vandaag is de winkel gesloten vanwege ${holiday.name.toLowerCase()}.`
+                  : `The shop is closed today because of ${holiday.name}.`}
+              </p>
+            )}
+            <div className="mt-6">
+              <OpenStatus large />
+            </div>
           </div>
         </Reveal>
 
@@ -43,7 +91,7 @@ export default function OpeningHours() {
                     )}
                   </span>
                   <span className={`font-display text-base ${h.open ? "text-cream-100" : "italic text-red-400/80"}`}>
-                    {h.open ? `${h.open} – ${h.close}` : t("hours.closed")}
+                    {h.open ? `${h.open} - ${h.close}` : t("hours.closed")}
                   </span>
                 </div>
               );

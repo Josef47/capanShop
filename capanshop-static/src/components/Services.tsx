@@ -14,12 +14,12 @@ export default function Services() {
 
   return (
     <section id="services" className="relative py-24">
-      <div className="container-shop">
+      <div className="container-shop px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow={t("services.subtitle")} title={t("services.title")} />
         <div className="grid gap-8 lg:grid-cols-3">
           {SERVICE_CATEGORIES.map((cat, i) => (
             <Reveal key={cat.id} delay={i * 120}>
-              <div className="card group flex h-full flex-col p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-gold-400/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+              <div className="card group flex h-full flex-col p-6 sm:p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-gold-400/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                 <div className="mb-6 text-center">
                   <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-gold-400/40 text-2xl text-gold-400 transition-all duration-500 group-hover:rotate-12 group-hover:bg-gold-400 group-hover:text-ink">
                     {CATEGORY_ICONS[cat.id]}
@@ -32,19 +32,27 @@ export default function Services() {
                   )}
                   <div className="mx-auto mt-4 h-px w-16 bg-gold-400/40" />
                 </div>
-                <ul className="flex-1 space-y-4">
+                <ul className="flex-1 space-y-3">
                   {cat.items.map((item) => (
-                    <li key={item.id} className="group/item flex items-baseline gap-2">
-                      <span className="text-sm text-cream-200 transition-colors group-hover/item:text-cream-100">
+                    <li
+                      key={item.id}
+                      className="group/item flex items-start gap-3 rounded-xl border border-white/5 bg-cream-50/5 px-3 py-3 transition-colors duration-300 hover:bg-cream-50/10"
+                    >
+                      <span className="min-w-0 flex-1 text-sm leading-relaxed text-cream-200 transition-colors group-hover/item:text-cream-100">
                         {item.name[lang]}
                       </span>
-                      <span className="mx-1 flex-1 border-b border-dotted border-coffee-700" />
-                      <span className="whitespace-nowrap font-display text-base text-gold-400">
-                        {item.priceFrom && (
-                          <span className="mr-1 text-xs italic text-cream-400">{t("services.from")}</span>
-                        )}
-                        €{item.price.toFixed(2).replace(".", ",").replace(",00", "")}
-                      </span>
+                      {item.priceText ? (
+                        <span className="max-w-[11rem] text-right text-xs leading-snug text-cream-300">
+                          {item.priceText[lang]}
+                        </span>
+                      ) : (
+                        <span className="whitespace-nowrap font-display text-lg font-semibold text-gold-400 sm:text-xl">
+                          {item.priceFrom && (
+                            <span className="mr-1 text-xs italic text-cream-400">{t("services.from")}</span>
+                          )}
+                          {item.price !== undefined && `€${item.price.toFixed(2).replace(".", ",").replace(",00", "")}`}
+                        </span>
+                      )}
                     </li>
                   ))}
                 </ul>

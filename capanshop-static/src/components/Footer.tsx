@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-gold-400/15 bg-coffee-950 py-12">
-      <div className="container-shop flex flex-col items-center gap-6 text-center">
+      <div className="container-shop flex flex-col items-center gap-6 px-4 text-center sm:px-6 lg:px-8">
         <img src="/capan-logo.gif" alt="Capan's Barber Shop" className="h-20 w-20 rounded-2xl shadow-lg" />
         <p className="max-w-sm text-sm text-cream-400">{t("footer.tagline")}</p>
         <div className="flex gap-6 text-sm text-cream-300">

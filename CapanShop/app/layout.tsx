@@ -3,7 +3,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/lib/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "Capan Kapsalon - Klassieke Stijl, Moderne Elegantie",
+  title: "Capan's Barber Shop - Klassieke Stijl, Moderne Elegantie",
   description:
     "Premium kapsalon in Nederland. Professionele knipbeurten en schoonheidsbehandelingen voor heren, dames en kinderen.",
 };

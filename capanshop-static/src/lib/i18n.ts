@@ -14,9 +14,13 @@ export const DICT: Dict = {
 
   // Hero
   "hero.title": { nl: "Klassieke Stijl, Moderne Elegantie", en: "Classic Style, Modern Elegance" },
+  "hero.womenNotice": {
+    nl: "Ook dameshaircuts • Vrouwelijke kapster beschikbaar",
+    en: "Women's haircuts too • Female stylist available",
+  },
   "hero.subtitle": {
-    nl: "Professionele knipbeurten en schoonheidsbehandelingen voor heren, dames en kinderen.",
-    en: "Professional haircuts and beauty services for men, women and children.",
+    nl: "Professionele knipbeurten voor heren, dames en kinderen — inclusief damescuts met speciale aandacht.",
+    en: "Professional haircuts for men, women and children — including women's cuts with special care.",
   },
   "hero.cta.book": { nl: "Afspraak maken", en: "Book appointment" },
   "hero.cta.prices": { nl: "Bekijk prijzen", en: "View prices" },

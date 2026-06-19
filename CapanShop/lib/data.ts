@@ -7,7 +7,7 @@ import { Barber, DayHours, Review, ServiceCategory } from "./types";
  */
 
 export const SHOP = {
-  name: "Capan Kapsalon",
+  name: "Capan's Barber Shop",
   phone: "+31153647232",
   phoneDisplay: "015 364 72 32",
   mobile: "+31611740604",

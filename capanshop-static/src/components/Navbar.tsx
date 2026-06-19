@@ -30,8 +30,8 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="container-shop flex h-20 items-center justify-between">
-        <a href="#home" className="group flex items-center">
+      <nav className="container-shop flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#home" className="group flex items-center pr-2">
           <img
             src="/capan-logo.gif"
             alt="Capan's Barber Shop"

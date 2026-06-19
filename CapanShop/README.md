@@ -1,4 +1,4 @@
-# Capan Kapsalon — Premium Barbershop Website
+# Capan's Barber Shop — Premium Barbershop Website
 
 Vintage-luxury barbershop website for [capan.nl](https://www.capan.nl/), built with Next.js 14, React 18, TypeScript and Tailwind CSS.
 

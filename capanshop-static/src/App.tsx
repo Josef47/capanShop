@@ -7,9 +7,7 @@ import Barbers from "@/components/Barbers";
 import Gallery from "@/components/Gallery";
 import BeforeAfter from "@/components/BeforeAfter";
 import Reviews from "@/components/Reviews";
-import Loyalty from "@/components/Loyalty";
 import Recruitment from "@/components/Recruitment";
-import GiftVoucher from "@/components/GiftVoucher";
 import Instagram from "@/components/Instagram";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
@@ -28,9 +26,7 @@ export default function App() {
         <Gallery />
         <BeforeAfter />
         <Reviews />
-        <Loyalty />
         <Recruitment />
-        <GiftVoucher />
         <Instagram />
         <Faq />
         <Contact />

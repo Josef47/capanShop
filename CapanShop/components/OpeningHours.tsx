@@ -22,7 +22,7 @@ export default function OpeningHours() {
           </span>
           <h2 className="section-title">{t("hours.title")}</h2>
           <p className="mt-4 max-w-md text-cream-300">
-            Capan Kapsalon — {t("footer.tagline")}.
+            Capan's Barber Shop — {t("footer.tagline")}.
           </p>
           <div className="mt-6">
             <OpenStatus large />

@@ -3,7 +3,8 @@ export type Lang = "nl" | "en";
 export interface ServiceItem {
   id: string;
   name: { nl: string; en: string };
-  price: number;
+  price?: number;
+  priceText?: { nl: string; en: string };
   priceFrom?: boolean;
   durationMin: number;
 }
