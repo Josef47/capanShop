@@ -3,11 +3,10 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import OpeningHours from "@/components/OpeningHours";
 import Services from "@/components/Services";
-import Barbers from "@/components/Barbers";
+import Team from "@/components/Team";
 import Gallery from "@/components/Gallery";
 import BeforeAfter from "@/components/BeforeAfter";
 import Reviews from "@/components/Reviews";
-import Loyalty from "@/components/Loyalty";
 import Recruitment from "@/components/Recruitment";
 import GiftVoucher from "@/components/GiftVoucher";
 import Instagram from "@/components/Instagram";
@@ -24,12 +23,11 @@ export default function App() {
         <Hero />
         <OpeningHours />
         <Services />
-        <Barbers />
+        <Team />
         <Gallery />
         <BeforeAfter />
         <Reviews />
-        <Loyalty />
-        <Recruitment />
+<Recruitment />
         <GiftVoucher />
         <Instagram />
         <Faq />

@@ -176,8 +176,8 @@ export const FAQ_ITEMS = [
     id: "f1",
     q: { nl: "Moet ik een afspraak maken?", en: "Do I need an appointment?" },
     a: {
-      nl: "Een afspraak is niet verplicht, maar wel aan te raden. Online boeken garandeert dat u direct geholpen wordt.",
-      en: "An appointment is not required but recommended. Booking online guarantees you are helped right away.",
+      nl: "Nee, een afspraak is niet nodig. U kunt gewoon binnenlopen — wij helpen u zo snel mogelijk. Bel of app ons gerust als u wilt weten hoe druk het is.",
+      en: "No, you don't need an appointment. Just walk in — we will help you as soon as possible. Feel free to call or message us to check how busy we are.",
     },
   },
   {
@@ -198,18 +198,18 @@ export const FAQ_ITEMS = [
   },
   {
     id: "f4",
-    q: { nl: "Hoe werkt de spaarkaart?", en: "How does the loyalty card work?" },
-    a: {
-      nl: "Bij elke knipbeurt ontvangt u een stempel. Bij 10 stempels is de volgende knipbeurt gratis.",
-      en: "You receive a stamp with every haircut. After 10 stamps your next haircut is free.",
-    },
-  },
-  {
-    id: "f5",
     q: { nl: "Verkopen jullie cadeaubonnen?", en: "Do you sell gift vouchers?" },
     a: {
       nl: "Ja, cadeaubonnen zijn verkrijgbaar in de salon voor elk gewenst bedrag.",
       en: "Yes, gift vouchers are available in the salon for any amount.",
+    },
+  },
+  {
+    id: "f5",
+    q: { nl: "Welke diensten bieden jullie aan?", en: "What services do you offer?" },
+    a: {
+      nl: "Wij knippen voor heren, dames en kinderen. Ook scheren, wassen, föhnen, highlights, epileren en meer. Bekijk onze volledige prijslijst hierboven.",
+      en: "We cut hair for men, women and children. Also shaving, washing, blow-drying, highlights, threading and more. See our full price list above.",
     },
   },
 ];
