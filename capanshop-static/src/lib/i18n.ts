@@ -95,14 +95,6 @@ export const DICT: Dict = {
     en: "Map loads here",
   },
 
-  // Recruitment
-  "recruit.title": { nl: "Ervaren kapper/kapster gezocht", en: "Experienced barber/hairdresser wanted" },
-  "recruit.text": {
-    nl: "Kom even langs of bel voor nadere informatie.",
-    en: "Drop by or call for more information.",
-  },
-  "recruit.cta": { nl: "Bel ons", en: "Call us" },
-
   // Gallery
   "gallery.title": { nl: "Galerij", en: "Gallery" },
   "gallery.subtitle": { nl: "Een blik in onze salon", en: "A look inside our salon" },

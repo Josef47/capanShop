@@ -7,7 +7,6 @@ import Barbers from "@/components/Barbers";
 import Gallery from "@/components/Gallery";
 import BeforeAfter from "@/components/BeforeAfter";
 import Reviews from "@/components/Reviews";
-import Recruitment from "@/components/Recruitment";
 import Instagram from "@/components/Instagram";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
@@ -26,7 +25,6 @@ export default function App() {
         <Gallery />
         <BeforeAfter />
         <Reviews />
-        <Recruitment />
         <Instagram />
         <Faq />
         <Contact />
