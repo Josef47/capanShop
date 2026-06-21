@@ -97,22 +97,21 @@ export function findService(id: string) {
 export const BARBERS: Barber[] = [
   {
     id: "b1",
+    name: "Çapan",
+    role: { nl: "Eigenaar & meester-barbier", en: "Owner & master barber" },
+    image: "/team-capan.jpg",
+  },
+  {
+    id: "b2",
     name: "Muhammet",
     role: { nl: "Barbier & stylist", en: "Barber & stylist" },
     image: "/team-muhammet.jpg",
   },
   {
-    id: "b2",
+    id: "b3",
     name: "Ceylan",
     role: { nl: "Dames-specialist", en: "Ladies' specialist" },
     image: "/team-ceylan.png",
-  },
-  {
-    id: "b3",
-    name: "",
-    role: { nl: "Binnenkort", en: "Coming soon" },
-    image: "",
-    placeholder: true,
   },
 ];
 
@@ -146,6 +145,16 @@ export const REVIEWS: Review[] = [
       en: "Great service, friendly staff, affordable prices.",
     },
     date: "Local Guide \u00b7 335 reviews",
+  },
+  {
+    id: "r4",
+    name: "Adriana Uhliar",
+    rating: 5,
+    text: {
+      nl: "Gisteren ben ik naar de kapperszaak geweest en ik ben ontzettend tevreden! De kapster heeft mijn haar geverfd en het resultaat is perfect geworden. Precies zoals ik het wilde! Geweldige service en een fijne sfeer. Zeker een aanrader!",
+      en: "Yesterday I went to the salon and I'm extremely satisfied! The hairdresser dyed my hair and the result turned out perfect. Exactly how I wanted it! Great service and a lovely atmosphere. Definitely recommended!",
+    },
+    date: "Google \u00b7 a year ago",
   },
 ];
 

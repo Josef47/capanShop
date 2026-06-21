@@ -21,8 +21,6 @@ export interface Barber {
   name: string;
   role: { nl: string; en: string };
   image: string;
-  /** Placeholder card for a future team member (no photo yet). */
-  placeholder?: boolean;
 }
 
 export interface DayHours {

@@ -116,7 +116,6 @@ export const DICT: Dict = {
   "barbers.subtitle": { nl: "Kies uw favoriete kapper", en: "Choose your favourite barber" },
   "barbers.favorite": { nl: "Favoriet", en: "Favourite" },
   "barbers.setFavorite": { nl: "Maak favoriet", en: "Set as favourite" },
-  "barbers.joinTitle": { nl: "Binnenkort", en: "Coming soon" },
 
   // Instagram
   "insta.title": { nl: "Volg ons op Instagram", en: "Follow us on Instagram" },
