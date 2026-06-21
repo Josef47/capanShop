@@ -47,6 +47,37 @@ body {
 ::-webkit-scrollbar-thumb { background-color: #3b2a1e; border-radius: 9999px; }
 ::-webkit-scrollbar-thumb:hover { background-color: #a07f22; }
 
+/* Component classes (ported from the original globals) */
+@layer components {
+  .container-shop {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl lg:text-5xl text-cream-100;
+  }
+
+  .section-eyebrow {
+    @apply mb-3 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-gold-400;
+  }
+
+  .gold-divider {
+    @apply mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-gold-400 to-transparent;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-gold-400 px-7 py-3.5 text-sm font-semibold uppercase tracking-widest text-ink transition-all duration-300 hover:bg-gold-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.35)] focus:outline-none focus:ring-2 focus:ring-gold-300;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-gold-400/60 px-7 py-3.5 text-sm font-semibold uppercase tracking-widest text-gold-300 transition-all duration-300 hover:border-gold-300 hover:bg-gold-400/10 focus:outline-none focus:ring-2 focus:ring-gold-300;
+  }
+
+  .card {
+    @apply rounded-md border border-coffee-700/50 bg-coffee-900/70 backdrop-blur-sm;
+  }
+}
+
 /* Reveal-on-scroll */
 .reveal {
   opacity: 0;

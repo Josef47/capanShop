@@ -22,7 +22,7 @@ export const DICT: Dict = {
     nl: "Professionele knipbeurten voor heren, dames en kinderen — inclusief damescuts met speciale aandacht.",
     en: "Professional haircuts for men, women and children — including women's cuts with special care.",
   },
-  "hero.cta.book": { nl: "Wil je knippen? Kom langs!", en: "Want a haircut? Just drop by!" },
+  "hero.cta.book": { nl: "Wil je knippen bij ons?", en: "Want a haircut with us?" },
   "hero.cta.prices": { nl: "Bekijk prijzen", en: "View prices" },
   "hero.since": { nl: "Vakmanschap sinds 2005", en: "Craftsmanship since 2005" },
 

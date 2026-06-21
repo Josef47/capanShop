@@ -21,6 +21,7 @@ export default function Footer() {
           {SHOP.instagram}
         </a>
         <p className="text-xs text-cream-400/60">© {new Date().getFullYear()} {SHOP.name}. {t("footer.rights")}.</p>
+        <p className="text-[11px] text-cream-400/40">Made by Vendix Software and M56 Software Solutions</p>
       </div>
     </footer>
   );
