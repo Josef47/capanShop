@@ -97,21 +97,22 @@ export function findService(id: string) {
 export const BARBERS: Barber[] = [
   {
     id: "b1",
-    name: "Ensar",
-    role: { nl: "Meester-barbier", en: "Master barber" },
-    image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=400&q=80",
+    name: "Muhammet",
+    role: { nl: "Barbier & stylist", en: "Barber & stylist" },
+    image: "/team-muhammet.jpg",
   },
   {
     id: "b2",
-    name: "Çapan",
+    name: "Ceylan",
     role: { nl: "Dames-specialist", en: "Ladies' specialist" },
-    image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=400&q=80",
+    image: "/team-ceylan.png",
   },
   {
     id: "b3",
-    name: "Ahmed",
-    role: { nl: "Barbier & stylist", en: "Barber & stylist" },
-    image: "https://images.unsplash.com/photo-1618077360395-f3068be8e001?w=400&q=80",
+    name: "",
+    role: { nl: "Binnenkort", en: "Coming soon" },
+    image: "",
+    placeholder: true,
   },
 ];
 
@@ -148,20 +149,20 @@ export const REVIEWS: Review[] = [
   },
 ];
 
+// Echte foto's uit de salon — geen stockbeelden meer.
 export const GALLERY_IMAGES = [
+  { src: "/gallery-main.jpg", alt: "Tevreden klant bij Capan's", tall: false },
   { src: "/gallery-1.jpg", alt: "Feest bij Capan's", tall: true },
-  { src: "/gallery-2.jpg", alt: "Capan's Barbershop", tall: true },
+  { src: "/gallery-cut-1.jpg", alt: "Strakke fade", tall: true },
+  { src: "/gallery-interior-1.jpg", alt: "In de salon", tall: false },
+  { src: "/gallery-2.jpg", alt: "Heren kapsel", tall: true },
+  { src: "/gallery-cut-3.jpg", alt: "Tevreden klant", tall: false },
   { src: "/gallery-3.jpg", alt: "In de salon", tall: true },
+  { src: "/gallery-cut-2.jpg", alt: "Heren knipbeurt", tall: true },
+  { src: "/gallery-interior-2.jpg", alt: "Onze salon", tall: false },
   { src: "/gallery-4.jpg", alt: "Capan's Barbershop", tall: true },
-  { src: "/gallery-5.jpg", alt: "Blije klant", tall: true },
-  { src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80", alt: "Classic fade haircut", tall: true },
-  { src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80", alt: "Barbershop interior" },
-  { src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80", alt: "Beard trim" },
-  { src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80", alt: "Vintage barber chair", tall: true },
-  { src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80", alt: "Straight razor shave" },
-  { src: "https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?w=800&q=80", alt: "Hot towel treatment" },
-  { src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80", alt: "Ladies styling", tall: true },
-  { src: "https://images.unsplash.com/photo-1634302086887-13b5281f0d98?w=800&q=80", alt: "Barber tools" },
+  { src: "/gallery-5.jpg", alt: "Blije jonge klant", tall: true },
+  { src: "/shop-outside.webp", alt: "Capan's Barbershop in Nootdorp", tall: false },
 ];
 
 export const BEFORE_AFTER = [

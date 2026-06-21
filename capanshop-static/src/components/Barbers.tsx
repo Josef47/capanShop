@@ -24,35 +24,49 @@ export default function Barbers() {
       <div className="container-shop">
         <SectionHeading eyebrow={t("barbers.subtitle")} title={t("barbers.title")} />
         <div className="grid gap-8 sm:grid-cols-3">
-          {BARBERS.map((b, i) => (
-            <Reveal key={b.id} delay={i * 120}>
-              <div className={`card group overflow-hidden transition-all duration-500 hover:-translate-y-1.5 ${favorite === b.id ? "border-gold-400/70 shadow-[0_0_30px_rgba(212,175,55,0.15)]" : ""}`}>
-                <div className="relative h-72 overflow-hidden">
-                  <img src={b.image} alt={b.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-coffee-950 via-transparent to-transparent" />
-                  {favorite === b.id && (
-                    <span className="absolute right-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-xs font-bold uppercase tracking-wider text-ink">
-                      ★ {t("barbers.favorite")}
+          {BARBERS.map((b, i) =>
+            b.placeholder ? (
+              <Reveal key={b.id} delay={i * 120}>
+                <div className="card flex h-full flex-col items-center justify-center overflow-hidden border-dashed border-coffee-700 p-6 text-center">
+                  <div className="flex h-72 w-full flex-col items-center justify-center">
+                    <span className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-dashed border-coffee-700 text-3xl text-coffee-700">
+                      ✂
                     </span>
-                  )}
+                    <h3 className="mt-6 font-display text-2xl text-cream-300">{t("barbers.joinTitle")}</h3>
+                    <p className="mt-2 max-w-[14rem] text-sm uppercase tracking-wider text-gold-400">{b.role[lang]}</p>
+                  </div>
                 </div>
-                <div className="p-6 text-center">
-                  <h3 className="font-display text-2xl text-cream-100">{b.name}</h3>
-                  <p className="mt-1 text-sm uppercase tracking-wider text-gold-400">{b.role[lang]}</p>
-                  <button
-                    onClick={() => toggleFavorite(b.id)}
-                    className={`mt-5 w-full rounded-sm border px-4 py-2.5 text-xs font-semibold uppercase tracking-widest transition-all duration-300 ${
-                      favorite === b.id
-                        ? "border-gold-400 bg-gold-400 text-ink"
-                        : "border-coffee-700 text-cream-300 hover:border-gold-400 hover:text-gold-300"
-                    }`}
-                  >
-                    {favorite === b.id ? `★ ${t("barbers.favorite")}` : `☆ ${t("barbers.setFavorite")}`}
-                  </button>
+              </Reveal>
+            ) : (
+              <Reveal key={b.id} delay={i * 120}>
+                <div className={`card group overflow-hidden transition-all duration-500 hover:-translate-y-1.5 ${favorite === b.id ? "border-gold-400/70 shadow-[0_0_30px_rgba(212,175,55,0.15)]" : ""}`}>
+                  <div className="relative h-72 overflow-hidden">
+                    <img src={b.image} alt={b.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-coffee-950 via-transparent to-transparent" />
+                    {favorite === b.id && (
+                      <span className="absolute right-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-xs font-bold uppercase tracking-wider text-ink">
+                        ★ {t("barbers.favorite")}
+                      </span>
+                    )}
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="font-display text-2xl text-cream-100">{b.name}</h3>
+                    <p className="mt-1 text-sm uppercase tracking-wider text-gold-400">{b.role[lang]}</p>
+                    <button
+                      onClick={() => toggleFavorite(b.id)}
+                      className={`mt-5 w-full rounded-sm border px-4 py-2.5 text-xs font-semibold uppercase tracking-widest transition-all duration-300 ${
+                        favorite === b.id
+                          ? "border-gold-400 bg-gold-400 text-ink"
+                          : "border-coffee-700 text-cream-300 hover:border-gold-400 hover:text-gold-300"
+                      }`}
+                    >
+                      {favorite === b.id ? `★ ${t("barbers.favorite")}` : `☆ ${t("barbers.setFavorite")}`}
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            )
+          )}
         </div>
       </div>
     </section>

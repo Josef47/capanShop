@@ -116,24 +116,7 @@ export const DICT: Dict = {
   "barbers.subtitle": { nl: "Kies uw favoriete kapper", en: "Choose your favourite barber" },
   "barbers.favorite": { nl: "Favoriet", en: "Favourite" },
   "barbers.setFavorite": { nl: "Maak favoriet", en: "Set as favourite" },
-
-  // Loyalty
-  "loyalty.title": { nl: "Spaarkaart", en: "Loyalty card" },
-  "loyalty.text": {
-    nl: "Spaar bij elke knipbeurt een stempel. Bij 10 stempels is uw volgende knipbeurt gratis!",
-    en: "Earn a stamp with every haircut. After 10 stamps your next haircut is free!",
-  },
-  "loyalty.stamps": { nl: "stempels", en: "stamps" },
-  "loyalty.addStamp": { nl: "Demo: stempel toevoegen", en: "Demo: add stamp" },
-  "loyalty.full": { nl: "Volle kaart — gratis knipbeurt!", en: "Full card — free haircut!" },
-
-  // Gift
-  "gift.title": { nl: "Cadeaubon", en: "Gift voucher" },
-  "gift.text": {
-    nl: "Geef stijl cadeau. Cadeaubonnen verkrijgbaar in de salon, voor elk bedrag.",
-    en: "Give the gift of style. Gift vouchers available in the salon, for any amount.",
-  },
-  "gift.cta": { nl: "Vraag in de salon", en: "Ask in the salon" },
+  "barbers.joinTitle": { nl: "Binnenkort", en: "Coming soon" },
 
   // Instagram
   "insta.title": { nl: "Volg ons op Instagram", en: "Follow us on Instagram" },
