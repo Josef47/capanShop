@@ -28,7 +28,7 @@ export default function Barbers() {
             <Reveal key={b.id} delay={i * 120}>
               <div className={`card group overflow-hidden transition-all duration-500 hover:-translate-y-1.5 ${favorite === b.id ? "border-gold-400/70 shadow-[0_0_30px_rgba(212,175,55,0.15)]" : ""}`}>
                 <div className="relative h-72 overflow-hidden">
-                  <img src={b.image} alt={b.name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src={b.image} alt={b.name} style={{ objectPosition: b.imagePosition }} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-coffee-950 via-transparent to-transparent" />
                   {favorite === b.id && (
                     <span className="absolute right-3 top-3 rounded-full bg-gold-400 px-3 py-1 text-xs font-bold uppercase tracking-wider text-ink">

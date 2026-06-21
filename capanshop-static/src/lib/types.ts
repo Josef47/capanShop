@@ -21,6 +21,8 @@ export interface Barber {
   name: string;
   role: { nl: string; en: string };
   image: string;
+  /** CSS object-position for the photo crop, e.g. "center 25%". Defaults to center. */
+  imagePosition?: string;
 }
 
 export interface DayHours {

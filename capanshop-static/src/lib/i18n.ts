@@ -22,7 +22,7 @@ export const DICT: Dict = {
     nl: "Professionele knipbeurten voor heren, dames en kinderen — inclusief damescuts met speciale aandacht.",
     en: "Professional haircuts for men, women and children — including women's cuts with special care.",
   },
-  "hero.cta.book": { nl: "Afspraak maken", en: "Book appointment" },
+  "hero.cta.book": { nl: "Wil je knippen? Kom langs!", en: "Want a haircut? Just drop by!" },
   "hero.cta.prices": { nl: "Bekijk prijzen", en: "View prices" },
   "hero.since": { nl: "Vakmanschap sinds 2005", en: "Craftsmanship since 2005" },
 
@@ -89,6 +89,7 @@ export const DICT: Dict = {
   "contact.mobile": { nl: "Mobiel", en: "Mobile" },
   "contact.address": { nl: "Adres", en: "Address" },
   "contact.whatsapp": { nl: "WhatsApp ons", en: "WhatsApp us" },
+  "contact.whatsappCta": { nl: "Vragen? WhatsApp ons!", en: "Questions? WhatsApp us!" },
   "contact.maps": { nl: "Google Maps", en: "Google Maps" },
   "contact.mapsPlaceholder": {
     nl: "Kaart wordt hier geladen",

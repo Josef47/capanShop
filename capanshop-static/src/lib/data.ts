@@ -100,6 +100,7 @@ export const BARBERS: Barber[] = [
     name: "Çapan",
     role: { nl: "Eigenaar & meester-barbier", en: "Owner & master barber" },
     image: "/team-capan.jpg",
+    imagePosition: "center 22%",
   },
   {
     id: "b2",
